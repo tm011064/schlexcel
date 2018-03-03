@@ -25,7 +25,7 @@ namespace schlexcel
       }
 
       var fileInfos = Directory
-        .GetFiles(sourceDirectoryPath, "*.fit", SearchOption.TopDirectoryOnly)
+        .GetFiles(sourceDirectoryPath)
         .Select(fileName => new FileInfo(fileName))
         .ToArray();
 
@@ -40,18 +40,5 @@ namespace schlexcel
         fileInfo,
         fitFileParser.Parse(fileInfo.FullName).ToArray());
     }
-  }
-
-  public class FileValue
-  {
-    public FileValue(FileInfo fileInfo, string[] values)
-    {
-      FileInfo = fileInfo;
-      Values = values;
-    }
-
-    public FileInfo FileInfo { get; }
-
-    public string[] Values { get; }
   }
 }

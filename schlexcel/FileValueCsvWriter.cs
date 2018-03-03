@@ -16,7 +16,7 @@ namespace schlexcel
 
         for (var i = 0; i < numberOfLines; i++)
         {
-
+          streamWriter.WriteLine(string.Join(", ", fileValues.Select(x => x.GetValueAt(i))));
         }
       }
     }

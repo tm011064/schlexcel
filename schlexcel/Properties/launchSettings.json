@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "schlexcel": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\temp\\schlexcel C:\\temp\\output.csv"
+    }
+  }
+}
