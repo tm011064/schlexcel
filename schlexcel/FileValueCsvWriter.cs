@@ -12,11 +12,11 @@ namespace schlexcel
       using (var fileStream = File.OpenWrite(destinationFilePath))
       using (var streamWriter = new StreamWriter(fileStream))
       {
-        streamWriter.WriteLine(string.Join(", ", fileValues.Select(x => x.FileInfo.Name)));
+        streamWriter.WriteLine(string.Join(",", fileValues.Select(x => x.FileInfo.Name)));
 
         for (var i = 0; i < numberOfLines; i++)
         {
-          streamWriter.WriteLine(string.Join(", ", fileValues.Select(x => x.GetValueAt(i))));
+          streamWriter.WriteLine(string.Join(",", fileValues.Select(x => x.GetValueAt(i))));
         }
       }
     }
