@@ -37,7 +37,7 @@ namespace schlexcel
             : sourceFolder.Value();
 
         var outputFileName = destinationFileName.HasValue()
-            ? destinationFolder.Value()
+            ? destinationFileName.Value()
             : "output.csv";
 
         fitFileConverter.ConvertFromDirectory(
